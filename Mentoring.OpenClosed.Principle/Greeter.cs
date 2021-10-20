@@ -1,6 +1,10 @@
 ﻿namespace Mentoring.OpenClosed.Principle
 {
-    public class Greeter
+    public interface IGreeter
+    {
+        string Greet(Language language);
+    }
+    public class Greeter : IGreeter
     {
         public string Greet(Language language)
         {
@@ -12,7 +16,6 @@
                     return "Hola";
                 case Language.Italian:
                     return "Ciao";
-                case Language.English:
                 default:
                     return "Hello";
             }
