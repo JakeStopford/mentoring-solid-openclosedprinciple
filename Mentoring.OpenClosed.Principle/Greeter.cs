@@ -2,23 +2,14 @@
 {
     public interface IGreeter
     {
-        string Greet(Language language);
+        string Greet();
     }
+
     public class Greeter : IGreeter
     {
-        public string Greet(Language language)
+        public string Greet()
         {
-            switch (language)
-            {
-                case Language.French:
-                    return "Bonjour";
-                case Language.Spanish:
-                    return "Hola";
-                case Language.Italian:
-                    return "Ciao";
-                default:
-                    return "Hello";
-            }
+            return "Hello";
         }
     }
 }

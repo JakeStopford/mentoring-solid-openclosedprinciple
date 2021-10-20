@@ -11,7 +11,7 @@ namespace Mentoring.OpenClosed.Principle.Tests
             var greeter = new Greeter();
             
             // Act
-            var result = greeter.Greet(Language.English);
+            var result = greeter.Greet();
             
             // Assert
             Assert.AreEqual("Hello", result);
@@ -21,10 +21,10 @@ namespace Mentoring.OpenClosed.Principle.Tests
         public void Greeter_InFrench_ReturnsHello()
         {
             // Arrange 
-            var greeter = new Greeter();
+            var greeter = new FrenchGreeter();
 
             // Act
-            var result = greeter.Greet(Language.French);
+            var result = greeter.Greet();
 
             // Assert
             Assert.AreEqual("Bonjour", result);
@@ -34,10 +34,10 @@ namespace Mentoring.OpenClosed.Principle.Tests
         public void Greeter_InSpanish_ReturnsHello()
         {
             // Arrange 
-            var greeter = new Greeter();
+            var greeter = new SpanishGreeter();
 
             // Act
-            var result = greeter.Greet(Language.Spanish);
+            var result = greeter.Greet();
 
             // Assert
             Assert.AreEqual("Hola", result);
@@ -47,10 +47,10 @@ namespace Mentoring.OpenClosed.Principle.Tests
         public void Greeter_InItalian_ReturnsHello()
         {
             // Arrange 
-            var greeter = new Greeter();
+            var greeter = new ItalianGreeter();
 
             // Act
-            var result = greeter.Greet(Language.Italian);
+            var result = greeter.Greet();
 
             // Assert
             Assert.AreEqual("Ciao", result);
